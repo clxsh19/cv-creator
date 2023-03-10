@@ -46,6 +46,7 @@ const Education = (props) => {
         </div>
       )
     })}
+    <FontAwesomeIcon icon={faPlus} className="add-icon" onClick={addForm} />
     <button onClick={addForm}>Add More..</button>
     {Back('drop-back-btn')}
     <Link to="/form/preview" className={["drop-next-btn", "glow-btn"].join(' ')} > 
