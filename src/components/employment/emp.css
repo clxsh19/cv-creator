@@ -1,0 +1,91 @@
+.form-grp textarea {
+    resize: vertical;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 6%);
+    height: 150px;
+    width: 450px;
+}
+
+.trash-icon {
+    transform: translateX(530px);
+}
+
+.form-del-btn {
+    
+}
+.drop-back-btn {
+    position: absolute;
+    top: 530px;
+    left: 100px;
+}
+.drop-next-btn {
+    position: absolute;
+    top: 530px;
+    left: 1150px;
+}
+
+.collapse-container {
+    max-width: 45%;
+    width: 100%;
+    margin-left: 28%;
+    transform: translate(24px, 121px);
+}
+
+.collapse-form {
+    background-color: #181439;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+    padding-left: 9%;
+
+    padding-top: 1%;
+    padding-bottom: 5px;
+}
+
+.toggle {
+    display: none;
+}
+
+.lbl-toggle {
+  display: block;
+  background-color: #181439;
+  margin-left: -2px;
+  border: 2px solid white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.toggle:checked + .lbl-toggle + .collapse-form {
+  max-height: 100vh;
+}
+
+.form-grp {
+    display: flex;
+}
+
