@@ -1,9 +1,15 @@
 body {
     font-family: tt commons,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
     background: linear-gradient(180deg, #141e30, #243b55);
-     overflow: hidden
+    overflow-x: hidden;
 }
 
+.form-title {
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+  transform: translate(194px, -86px);
+}
 .form-elm {
 
 }

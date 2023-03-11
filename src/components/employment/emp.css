@@ -8,6 +8,29 @@
     width: 450px;
 }
 
+.collapse-title {
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+  transform: translate(550px, 60px);
+}
+.add-icon {
+    color: white;
+    font-size: 2em;
+    background-color: #03e9f4;
+    border-radius: 10px;
+    padding: 4px;
+    transform: translate(410px, 140px);
+}
+
+.add-icon:hover {
+    background: #03e9f4;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
 .trash-icon {
     transform: translateX(530px);
 }
@@ -16,14 +39,10 @@
     
 }
 .drop-back-btn {
-    position: absolute;
-    top: 530px;
-    left: 100px;
+    transform: translate(20px, 400px);
 }
 .drop-next-btn {
-    position: absolute;
-    top: 530px;
-    left: 1150px;
+    transform: translate(1050px, 400px);
 }
 
 .collapse-container {

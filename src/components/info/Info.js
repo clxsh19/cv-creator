@@ -8,6 +8,7 @@ const Info = (props) => {
 	}
 	return (
 		<div className="form-container">
+		  <div class='form-title'>General Info</div>
 		  <form className="form">
 		    <div className="form-grp">
 		      {createFormElm(props.f_name, handelChange, 'f_name', 'First Name', 'text')}

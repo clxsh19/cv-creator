@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Info from "./components/info/Info"
 import Home from "./components/Home"
 import Employment from "./components/employment/Employment"
 import Education from "./components/education/Education"
-import ErrorPage from "./components/error-page";
+// import ErrorPage from "./components/error-page";
 import Preview from "./components/Preview";
 import { Route, Routes, Link } from "react-router-dom";
 

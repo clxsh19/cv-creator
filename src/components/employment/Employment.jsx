@@ -21,6 +21,7 @@ const Experience = (props) => {
 	return (
 		<>
 		<div id="form-wrapper">
+		<div className='collapse-title'>Work Experience</div>
 		{props.forms.map((form, index) => {
 		  return (
 		  	<div key={index} className="collapse-container">
