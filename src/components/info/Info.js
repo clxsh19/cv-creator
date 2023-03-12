@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { createFormElm , Back } from "../helper"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faIdBadge } from '@fortawesome/free-solid-svg-icons'
+
 import "./info.css"
 
 const Info = (props) => {
@@ -8,7 +11,8 @@ const Info = (props) => {
 	}
 	return (
 		<div className="form-container">
-		  <div class='form-title'>General Info</div>
+		  <div className='form-title'>
+		  <FontAwesomeIcon icon={faIdBadge} className="info-icon" />General Info</div>
 		  <form className="form">
 		    <div className="form-grp">
 		      {createFormElm(props.f_name, handelChange, 'f_name', 'First Name', 'text')}
@@ -26,7 +30,7 @@ const Info = (props) => {
             <textarea className="info_text" onChange={handelChange} value={props.description} name="description" placeholder="Summary..."></textarea>
         </div>
         {Back('form-back-btn')}
-        <Link to="/form/emplyoment" className="glow-btn"> 
+        <Link to="/form/emplyoment" className={['form-next-btn', 'glow-btn'].join(' ')}> 
           <span></span><span></span>
           <span></span><span></span>
           Next 

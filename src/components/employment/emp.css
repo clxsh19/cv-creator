@@ -58,9 +58,9 @@
     overflow: hidden;
     transition: max-height .25s ease-in-out;
     padding-left: 9%;
-
     padding-top: 1%;
     padding-bottom: 5px;
+    border: 2px solid white;
 }
 
 .toggle {

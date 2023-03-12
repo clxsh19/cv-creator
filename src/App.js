@@ -3,7 +3,7 @@ import Info from "./components/info/Info"
 import Home from "./components/Home"
 import Employment from "./components/employment/Employment"
 import Education from "./components/education/Education"
-// import ErrorPage from "./components/error-page";
+import Skill from "./components/skill/Skill";
 import Preview from "./components/Preview";
 import { Route, Routes, Link } from "react-router-dom";
 
@@ -27,7 +27,16 @@ function App() {
     start_date: '',
     end_date: '',
     description: '',
-  }])
+  }]);
+
+  const [skillForms, setSkillField] = useState([{
+    skill: '',
+    level: '',
+  }]);
+
+  const [intrestForms, setIntrestField] = useState([{
+    intrest: '',
+  }]);
 
   const handleInfoChange = (event) => {
     const target = event.target;
@@ -52,6 +61,18 @@ function App() {
     setEduField(newForms);
   }
 
+  const handleSkillChange = (event, index) => {
+    let newForms = [...skillForms];
+    newForms[index][event.target.name] = event.target.value;
+    setSkillField(newForms);
+  }
+
+  const handleIntrestChange = (event, index) => {
+    let newForms = [...intrestForms];
+    newForms[index][event.target.name] = event.target.value;
+    setIntrestField(newForms);
+  }
+
   function addEmpForm() {
     let newForm = {
       job: '', employer: '',
@@ -72,6 +93,21 @@ function App() {
     setEduField([...eduForms, newForm])
   }
 
+  function addSkillForm() {
+    let newForm = {
+      skill: '',
+      level: '',
+    }
+    setSkillField([...skillForms, newForm])
+  }
+
+  function addIntrestForm() {
+    let newForm = {
+      intrest: '',
+    }
+    setIntrestField([...intrestForms, newForm])
+  }
+
   function removeEmpForm(index) {
     let newForms = [...empForms];
     newForms.splice(index, 1);
@@ -82,6 +118,18 @@ function App() {
     let newForms = [...eduForms];
     newForms.splice(index, 1);
     setEduField(newForms);
+  }
+
+  function removeSkillForm(index) {
+    let newForms = [...skillForms];
+    newForms.splice(index, 1);
+    setSkillField(newForms);
+  }
+
+  function removeIntrestForm(index) {
+    let newForms = [...intrestForms];
+    newForms.splice(index, 1);
+    setIntrestField(newForms);
   }
 
   return (
@@ -112,13 +160,23 @@ function App() {
                          removeForm={removeEduForm} 
                         />} 
         />
+        <Route path="/form/skill" 
+               element={<Skill 
+                         handleSkillChange={handleSkillChange} handleIntrestChange={handleIntrestChange}
+                         skillForm={skillForms} intrestForm={intrestForms}
+                         addSkill={addSkillForm} addIntrest={addIntrestForm}
+                         removeSkill={removeSkillForm} removeIntrest={removeIntrestForm}
+                        />} 
+        />
         <Route path="/form/preview" 
                element={<Preview 
                          info={infoField}
                          education={eduForms}
                          employment={empForms} 
+                         skills={skillForms}
                         />} 
         />
+
       </Routes>
     </>
   );

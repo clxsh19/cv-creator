@@ -26,6 +26,15 @@ const createFormElm = (value, handelChange, name, text, type) => {
 	)
 }
 
+const createSkillElm = (value, handelChange, name, text, type, index) => {
+	return (
+		<div className="form-elm">
+		  <label>{text}</label>
+          <input type={type} value={value} onChange={event => handelChange(event, index)} name={name}/>
+        </div>
+	)
+}
+
 const createEmpElm = (value, handelChange, name, text, type, index) => {
 	return (
 		<div className="form-elm">
@@ -35,4 +44,4 @@ const createEmpElm = (value, handelChange, name, text, type, index) => {
 	)
 }
 
-export {createFormElm, createEmpElm, Back};
+export {createFormElm, createEmpElm, Back, createSkillElm };

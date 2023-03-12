@@ -1,0 +1,50 @@
+.intro-body {
+	color: white;
+	font-size: 3.5em;
+	transform: translate(106px, 200px);
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.side-img {
+	background-image: url(./home-bg.png);
+    transform: translate(700px, -170px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+    width: 45vw;
+}
+.super-title {
+	color: lightblue;
+	font-size: 1.4em;
+	font-weight: 500;
+	transform: translate(111px, 200px);
+}
+
+.intro-desc {
+	color: rgb(180, 180, 160);
+	margin-top: 20px;
+	font-size: 1.2em;
+	line-height: 1.5;
+	transform: translate(111px, 200px);
+}
+
+.create-btn {
+	background-color: red;
+    color: white;
+    position: relative;
+    top: 250px;
+    left: 110px;
+    font-size: 1.4rem;
+    padding: 14px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.create-btn:hover {
+    background: #d11313;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.5rem;
+/*    box-shadow: 0 0 5px #d11313, 0 0 50px #d11313, 0 0 100px #d11313;*/
+}

@@ -1,7 +1,16 @@
 body {
     font-family: tt commons,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
     background: linear-gradient(180deg, #141e30, #243b55);
-    overflow-x: hidden;
+/*     background-image: url(./b1.jpg);*/
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+      overflow-x: hidden;
+}
+
+.info-icon {
+  transform: translateX(-10px);
 }
 
 .form-title {
@@ -46,7 +55,7 @@ body {
     max-width: 45%;
     width: 100%;
     margin-left: 28%;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 .form {
@@ -58,9 +67,12 @@ body {
     box-shadow: 0 15px 40px rgba(0,0,0,.6);
 }
 .form-back-btn {
-    position: relative;
+    transform: translateX(-70px);
 }
 
+.form-next-btn {
+    transform: translateX(280px);
+}
 .glow-btn {
   position: relative;
   display: inline-block;

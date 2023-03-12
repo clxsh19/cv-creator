@@ -1,0 +1,50 @@
+.skill-title {
+	color: white;
+    font-weight: bold;
+    font-size: xx-large;
+    transform: translate(410px, 100px);
+}
+
+.skill-wrapper {
+	margin-bottom: 8vh;
+}
+
+.intrest-add-icon {
+	color: white;
+    font-size: 2em;
+    background-color: #03e9f4;
+    border-radius: 10px;
+    padding: 4px;
+    transform: translate(410px, 86px);
+}
+
+.intrest-add-icon:hover {
+    background: #03e9f4;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+.intrest-elm input {
+    padding: 10px;
+    margin: 14px 63px 20px 0px;
+    border-radius:10px;
+    background-color: #3a3758;
+    border:0;
+    box-shadow:6px 6px 4px 2px rgb(0 0 0 / 30%);
+    transition: .3s box-shadow;
+
+}
+.intrest-elm input:hover {
+  background-color: #4d4a6d;
+}
+
+.intrest-elm label {
+	margin-right: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.intrest-elm {
+
+}
