@@ -134,10 +134,10 @@ function App() {
 
   return (
     <>
-      <Link to="/"> <button>Home</button> </Link>
+      <Link to="/cv-creator"> <button>Home</button> </Link>
       <Link to="/form/info"> <button>Info</button> </Link>      
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/cv-creator" element={<Home />} />
         <Route path="/form/info" 
                element={<Info handleInputChange={handleInfoChange}
                          f_name={infoField.f_name}  l_name={infoField.l_name}
