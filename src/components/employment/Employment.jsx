@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faTrash, faPlus, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { createEmpElm, Back } from "../helper"
 import "./emp.css"
 
@@ -21,7 +21,10 @@ const Experience = (props) => {
 	return (
 		<>
 		<div id="form-wrapper">
-		<div className='collapse-title'>Work Experience</div>
+		<div className='collapse-title'>
+      <FontAwesomeIcon icon={faBriefcase} className="collapse-icon" />
+		  Work Experience
+		</div>
 		{props.forms.map((form, index) => {
 		  return (
 		  	<div key={index} className="collapse-container">
@@ -41,7 +44,6 @@ const Experience = (props) => {
             <div className="form-grp">
               <textarea className="exp_text" onChange={event => handelChange(event, index)} value={form.description} name="description" placeholder="Description..."></textarea>
             </div>
-
           </form>
         </div>
       )

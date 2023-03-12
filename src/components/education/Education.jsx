@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { createEmpElm, Back } from "../helper"
-import "../employment/emp.css"
+import "./education.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faTrash, faPlus, faSchool } from '@fortawesome/free-solid-svg-icons'
 
 const Education = (props) => {
 
@@ -22,7 +22,10 @@ const Education = (props) => {
 	return (
 		<>
 		<div id="form-wrapper">
-		<div className='collapse-title'>Education Details</div>
+		<div className='collapse-title'>
+			<FontAwesomeIcon icon={faSchool} className="collapse-icon" />
+			Education Details
+		</div>
 		{props.forms.map((form, index) => {
 		  return (
 		  	<div key={index} className="collapse-container">
@@ -47,7 +50,7 @@ const Education = (props) => {
         </div>
       )
     })}
-    <FontAwesomeIcon icon={faPlus} className="add-icon" onClick={addForm} />
+    <FontAwesomeIcon icon={faPlus} className="edu-add-icon" onClick={addForm} />
     {Back('drop-back-btn')}
     <Link to="/form/skill" className={["drop-next-btn", "glow-btn"].join(' ')} > 
     <span></span><span></span>

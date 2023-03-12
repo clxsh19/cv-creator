@@ -6,3 +6,19 @@
 	color: white;
 }
 
+.edu-add-icon {
+    color: white;
+    font-size: 2em;
+    background-color: #03e9f4;
+    border-radius: 10px;
+    padding: 4px;
+    transform: translate(410px, 91px);
+}
+
+.edu-add-icon:hover {
+    background: #03e9f4;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}

@@ -8,11 +8,14 @@
     width: 450px;
 }
 
+.collapse-icon {
+  transform: translateX(-10px);
+}
 .collapse-title {
   color: white;
   font-weight: bold;
   font-size: xx-large;
-  transform: translate(550px, 60px);
+  transform: translate(560px, 90px);
 }
 .add-icon {
     color: white;
@@ -20,7 +23,7 @@
     background-color: #03e9f4;
     border-radius: 10px;
     padding: 4px;
-    transform: translate(410px, 140px);
+    transform: translate(410px, 145px);
 }
 
 .add-icon:hover {
@@ -39,17 +42,17 @@
     
 }
 .drop-back-btn {
-    transform: translate(20px, 400px);
+    transform: translate(160px, 400px);
 }
 .drop-next-btn {
-    transform: translate(1050px, 400px);
+    transform: translate(1020px, 400px);
 }
 
 .collapse-container {
     max-width: 45%;
     width: 100%;
     margin-left: 28%;
-    transform: translate(24px, 121px);
+    transform: translate(20px, 120px);
 }
 
 .collapse-form {
