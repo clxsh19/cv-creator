@@ -2,12 +2,12 @@ import "./preview.css"
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import { useRef } from 'react';
-
 const Preview = (props) => {
 	let info = props.info;
 	let emp = props.employment;
 	let edu = props.education;
   let skills = props.skills;
+  let intrest = props.intrest;
   const printRef = useRef();
 
   const handleDownload = async () => {
@@ -26,8 +26,8 @@ const Preview = (props) => {
 
 	return (
     <div>
-    <button type="button" onClick={handleDownload}>
-        Download as PDF
+    <button type="button" class="pdf" onClick={handleDownload}>
+        Download
     </button>
 		<div ref={printRef} className="container">
 		  <div className="header">
@@ -56,7 +56,6 @@ const Preview = (props) => {
               <div key={"emp"+index} className="section__list-item">
                 <div className="left">
                   <div className="name">{form.employer}</div>
-                  <div className="addr">San Fr, CA</div>
                   <div className="duration">{form.start_date} - {form.end_date}</div>
                 </div>
                 <div className="right">
@@ -96,11 +95,25 @@ const Preview = (props) => {
               <div key={"skill"+index} class="section__list-item">
                 <div className="left">
                   <div className="name">{form.skill}</div>
-                  <div className="addr">{form.level}</div>
                   <div className="duration"></div>
                 </div>
                 <div className="right">
                   <div className="desc">{form.level}</div>
+                </div>
+              </div>
+              )
+            })
+          }
+          </div>
+        </div>
+        <div className="section">
+          <div className="section__title">Hobbies</div>
+          <div classNAme="section__list">
+          {intrest.map((intrests, index) => {
+              return (
+              <div key={"int"+index} class="section__list-item">
+                <div className="left">
+                  <div className="name">{intrests.intrest}</div>
                 </div>
               </div>
               )

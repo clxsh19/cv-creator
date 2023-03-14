@@ -1,4 +1,4 @@
-.form-grp textarea {
+/*.form-grp textarea {
     resize: vertical;
     padding: 15px;
     border-radius: 15px;
@@ -6,7 +6,7 @@
     box-shadow: 4px 4px 10px rgb(0 0 0 / 6%);
     height: 150px;
     width: 450px;
-}
+}*/
 
 .collapse-icon {
   transform: translateX(-10px);
@@ -14,7 +14,7 @@
 .collapse-title {
   color: white;
   font-weight: bold;
-  font-size: xx-large;
+  font-size: 2.7em;
   transform: translate(560px, 90px);
 }
 .add-icon {
@@ -35,24 +35,43 @@
 }
 
 .trash-icon {
-    transform: translateX(530px);
+    transform: translate(545px,18px);
+    font-size: 2em;
+
 }
 
-.form-del-btn {
-    
-}
 .drop-back-btn {
-    transform: translate(160px, 400px);
+    position: absolute;
+    top: 80vh;
+    left: 10vw;
 }
 .drop-next-btn {
-    transform: translate(1020px, 400px);
+    position: absolute;
+    top: 80vh;
+    left: 85vw;
 }
 
 .collapse-container {
-    max-width: 45%;
-    width: 100%;
+    width: 50vw;
+    height: 9vh;
+    border-radius: 8px;
     margin-left: 28%;
+    margin-bottom: 10px;
     transform: translate(20px, 120px);
+    background-color: #181439;
+    border: 2px solid white;
+}
+
+.job-container {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+.job-container text{
+
 }
 
 .collapse-form {
@@ -66,21 +85,25 @@
     border: 2px solid white;
 }
 
+.form-grp {
+    display: flex;
+}
+
 .toggle {
     display: none;
 }
 
 .lbl-toggle {
   display: block;
-  background-color: #181439;
-  margin-left: -2px;
-  border: 2px solid white;
-  font-size: 1rem;
-  text-transform: uppercase;
-  padding: 1rem;
-  color: white;
-  cursor: pointer;
-  transition: all 0.25s ease-out;
+    background-color: #181439;
+    margin-left: -2px;
+    border: 1px solid white;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    padding: 0.4rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
 }
 
 .lbl-toggle::before {
@@ -106,7 +129,6 @@
 .toggle:checked + .lbl-toggle + .collapse-form {
   max-height: 100vh;
 }
-
 .form-grp {
     display: flex;
 }

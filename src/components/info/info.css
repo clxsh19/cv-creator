@@ -17,18 +17,19 @@ body {
   color: white;
   font-weight: bold;
   font-size: xx-large;
-  transform: translate(194px, -86px);
+  transform: translate(220px, -86px);
 }
 .form-elm {
 
 }
 .form-elm input {
-    padding: 10px;
+    padding: 12px;
+    padding-right: 40px;
     margin: 14px 63px 20px 0px;
-    border-radius:10px;
+    border-radius: 10px;
     background-color: #3a3758;
-    border:0;
-    box-shadow:6px 6px 4px 2px rgb(0 0 0 / 30%);
+    border: 0;
+    box-shadow: 6px 6px 4px 2px rgb(0 0 0 / 30%);
     transition: .3s box-shadow;
 
 }
@@ -42,19 +43,21 @@ body {
 }
 
 .form-grp textarea {
-  resize: vertical;
-  padding:15px;
-  border-radius:15px;
-  border:0;
-  box-shadow:4px 4px 12px rgba(0,0,0,0.06);
-  height:150px;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    box-shadow: 4px 4px 10px rgb(0 0 0 / 6%);
+    height: 150px;
+    width: 511px;
 }
 
 .form-container {
     
     max-width: 45%;
     width: 100%;
-    margin-left: 28%;
+    margin-left: 26%;
     margin-top: 7%;
 }
 
@@ -63,6 +66,7 @@ body {
     padding-left: 7vw;
     padding-top: 4vh;
     border-radius: 16px;
+    width: 50vw;
     margin-top: -8vh;
     box-shadow: 0 15px 40px rgba(0,0,0,.6);
 }
@@ -71,7 +75,7 @@ body {
 }
 
 .form-next-btn {
-    transform: translateX(280px);
+    transform: translateX(360px);
 }
 .glow-btn {
   position: relative;

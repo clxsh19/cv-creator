@@ -38,10 +38,10 @@ const Skill = (props) => {
 		  <div className='skill-title'>Skill</div>
 		  { skillForm.map((form, index) => {
 		  	return (
-		  	<div key={index} className="collapse-container">
+		  	<div key={index} className="skill-container">
 		  	  <input id={index} className="toggle" type="checkbox"/>
           <label htmlFor={index} className="lbl-toggle" >
-            <FontAwesomeIcon icon={faTrash} className="trash-icon" onClick={()=>removeSkill(index)} />
+            <FontAwesomeIcon icon={faTrash} className="skill-trash-icon" onClick={()=>removeSkill(index)} />
             {form.skill?form.skill:'Not Specified'}
           </label>
 		      <form className="collapse-form">
@@ -53,16 +53,16 @@ const Skill = (props) => {
         </div>
         )
       })}
-    <FontAwesomeIcon icon={faPlus} className="add-icon" onClick={addSkill} />
+    <FontAwesomeIcon icon={faPlus} className="intrest-add-icon" onClick={addSkill} />
   </div>
   <div className="skill-wrapper">
 	  <div className='skill-title'>Hobbies</div>
 	  { intrestForm.map((form, index) => {
 	  	return (
-	  	<div key={index+100} className="collapse-container">
+	  	<div key={index+100} className="skill-container">
 	  	  <input id={index+100} className="toggle" type="checkbox"/>
         <label htmlFor={index+100} className="lbl-toggle" >
-          <FontAwesomeIcon icon={faTrash} className="trash-icon" onClick={()=>removeIntrest(index)} />
+          <FontAwesomeIcon icon={faTrash} className="skill-trash-icon" onClick={()=>removeIntrest(index)} />
           {form.intrest?form.intrest:'Not Specified'}
         </label>
 	      <form className="collapse-form">

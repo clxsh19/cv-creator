@@ -18,6 +18,24 @@ body {
   padding-bottom: 50px;
 }
 
+.pdf {
+}
+
+.pdf {
+    color: white;
+    font-size: 1.5em;
+    background-color: #03e9f4;
+    border-radius: 10px;
+    padding: 8px;
+    transform: translate(80px,90px);
+
+}
+
+.pdf:hover {
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 2px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
 .container {
   max-width: 700px;   
   background: #fff;

@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import Info from "./components/info/Info"
 import Home from "./components/Home"
 import Employment from "./components/employment/Employment"
 import Education from "./components/education/Education"
+import Job from "./components/employment/Add_emp"
+import Edu from "./components/education/Add_edu"
 import Skill from "./components/skill/Skill";
-import Preview from "./components/Preview";
+import Preview from "./components/preview/Preview";
 import { Route, Routes, Link } from "react-router-dom";
 
 function App() {
@@ -134,8 +138,9 @@ function App() {
 
   return (
     <>
-      <Link to="/cv-creator"> <button>Home</button> </Link>
-      <Link to="/form/info"> <button>Info</button> </Link>      
+      <Link to="/cv-creator">
+        <FontAwesomeIcon icon={faHouse} className="home-icon" />
+      </Link>     
       <Routes>
         <Route path="/cv-creator" element={<Home />} />
         <Route path="/form/info" 
@@ -146,11 +151,21 @@ function App() {
                          description={infoField.description}
                         />} 
         />
-        <Route path="/form/emplyoment" 
+        <Route path="/form/emplyoment/" 
                element={<Employment handleInputChange={handleEmpChange}
                          forms={empForms}
                          addForm={addEmpForm}
                          removeForm={removeEmpForm} 
+                         info={infoField}
+                         education={eduForms}
+                         employment={empForms} 
+                         skills={skillForms}
+                         intrest={intrestForms}
+                        />}
+        />
+        <Route path="/form/emplyoment/:id" 
+               element={<Job handleInputChange={handleEmpChange}
+                         forms={empForms}
                         />}
         />
         <Route path="/form/education" 
@@ -159,6 +174,11 @@ function App() {
                          addForm={addEduForm}
                          removeForm={removeEduForm} 
                         />} 
+        />
+        <Route path="/form/education/:id" 
+               element={<Edu handleInputChange={handleEduChange}
+                         forms={eduForms}
+                        />}
         />
         <Route path="/form/skill" 
                element={<Skill 
@@ -174,6 +194,7 @@ function App() {
                          education={eduForms}
                          employment={empForms} 
                          skills={skillForms}
+                         intrest={intrestForms}
                         />} 
         />
 

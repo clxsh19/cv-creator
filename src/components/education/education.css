@@ -12,7 +12,7 @@
     background-color: #03e9f4;
     border-radius: 10px;
     padding: 4px;
-    transform: translate(410px, 91px);
+    transform: translate(410px, 145px);
 }
 
 .edu-add-icon:hover {
@@ -21,4 +21,26 @@
     padding: 8px;
     border-radius: 8px;
     box-shadow: 0 0 2px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.home-icon {
+    font-size: 2rem;
+    color: white;
+    transform: translate(20px,20px);
+}
+
+.small-preview {
+  width: 30vw;   
+  height: 75vh;
+  background: #fff;
+  margin: 0px auto 0px; 
+  box-shadow: 1px 1px 2px #DAD7D7;
+  border-radius: 3px;  
+  padding: 40px;
+  margin-top: 50px;
+  transform: translate(-420px,-20px);
+}
+
+.form-wrapper {
+    transform: translate(10px, 20px);
 }

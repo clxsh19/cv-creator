@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 const Home = () => {
 	return (
 		<div class="home-body">
+		<div class="content">
+		  <h2>CVMaker</h2><h2>CVMaker</h2>
+		</div>
 		<div class="super-title">Fast. Easy. Effective.</div>
 		<div class="intro-body">
 		  Online Cv Maker <br></br>
