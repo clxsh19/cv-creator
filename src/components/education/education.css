@@ -1,46 +1,323 @@
+.education-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+}
+
+.bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(3, 233, 244, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(3, 233, 244, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+.education-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #03e9f4, #0077ff);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.header-icon {
+  color: white;
+  font-size: 2rem;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(3, 233, 244, 0.3);
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #03e9f4, #0077ff);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.education-card {
+  background: rgba(24, 20, 57, 0.8);
+  border: 2px solid rgba(3, 233, 244, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  border-color: #03e9f4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+  position: relative;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.education-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: calc(100% - 50px);
+}
+
+.education-info {
+  margin-bottom: 1rem;
+}
+
+.school-name {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.education-card:hover .school-name {
+  color: #03e9f4;
+}
+
+.degree-info {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 300;
+}
+
+.education-duration {
+  color: #03e9f4;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  color: #a0a0a0;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.education-card:hover .edit-icon {
+  color: #03e9f4;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #ff4757;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background: rgba(255, 71, 87, 0.2);
+  color: #ff6b7a;
+  transform: scale(1.1);
+}
+
+.add-education-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(24, 20, 57, 0.4);
+  border: 2px dashed rgba(3, 233, 244, 0.5);
+  border-radius: 15px;
+  min-height: 150px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-education-card:hover {
+  border-color: #03e9f4;
+  background: rgba(3, 233, 244, 0.1);
+  transform: translateY(-3px);
+}
+
+.add-card-content {
+  text-align: center;
+  color: #03e9f4;
+}
+
 .add-icon {
-	color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
 }
 
-.fa-trash {
-	color: white;
+.add-education-card:hover .add-icon {
+  transform: rotate(90deg);
 }
 
-.edu-add-icon {
-    color: white;
-    font-size: 2em;
-    background-color: #03e9f4;
-    border-radius: 10px;
-    padding: 4px;
-    transform: translate(410px, 145px);
+.add-text {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.edu-add-icon:hover {
-    background: #03e9f4;
-    color: #fff;
-    padding: 8px;
-    border-radius: 8px;
-    box-shadow: 0 0 2px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+.navigation-controls {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 10;
 }
 
-.home-icon {
+.nav-back-btn,
+.nav-next-btn {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: rgba(24, 20, 57, 0.8);
+  border: 2px solid #03e9f4;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.nav-next-btn {
+  color: #ffffff;
+}
+
+.btn-bg {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #03e9f4, #0077ff);
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  z-index: -1;
+}
+
+.nav-next-btn .btn-bg:nth-child(1) {
+  transition-delay: 0s;
+}
+.nav-next-btn .btn-bg:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.nav-next-btn .btn-bg:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.nav-next-btn .btn-bg:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.nav-next-btn:hover .btn-bg {
+  transform: translateX(0);
+}
+
+.nav-next-btn:hover {
+  border-color: #0077ff;
+  box-shadow: 0 0 20px rgba(3, 233, 244, 0.4);
+}
+
+.nav-back-btn:hover {
+  background: rgba(3, 233, 244, 0.1);
+  box-shadow: 0 0 15px rgba(3, 233, 244, 0.2);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .education-container {
+    padding: 1rem;
+  }
+
+  .section-title {
     font-size: 2rem;
-    color: white;
-    transform: translate(20px,20px);
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .navigation-controls {
+    padding: 0 1rem;
+  }
 }
 
-.small-preview {
-  width: 30vw;   
-  height: 75vh;
-  background: #fff;
-  margin: 0px auto 0px; 
-  box-shadow: 1px 1px 2px #DAD7D7;
-  border-radius: 3px;  
-  padding: 40px;
-  margin-top: 50px;
-  transform: translate(-420px,-20px);
-}
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
 
-.form-wrapper {
-    transform: translate(10px, 20px);
+  .school-name {
+    font-size: 1.2rem;
+  }
+
+  .add-icon {
+    font-size: 2rem;
+  }
 }

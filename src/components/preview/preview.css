@@ -5,7 +5,7 @@
 }
 
 html {
-  height: 100%;  
+  height: 100%;
 }
 
 body {
@@ -18,117 +18,208 @@ body {
   padding-bottom: 50px;
 }
 
-.pdf {
+/* Main Container */
+.preview-page-container {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 2rem;
+  font-family: 'Lato', sans-serif;
 }
 
-.pdf {
-    color: white;
-    font-size: 1.5em;
-    background-color: #03e9f4;
-    border-radius: 10px;
-    padding: 8px;
-    transform: translate(80px,90px);
-
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
 }
 
-.pdf:hover {
-    background: #03e9f4;
-    color: #fff;
-    box-shadow: 0 0 2px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 24px;
+  background: #6c757d;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
 }
-.container {
-  max-width: 700px;   
-  background: #fff;
-  margin: 0px auto 0px; 
-  box-shadow: 1px 1px 2px #DAD7D7;
-  border-radius: 3px;  
+
+.back-btn:hover {
+  background: #545b62;
+}
+
+.back-icon {
+  transition: transform 0.2s ease;
+}
+
+.back-btn:hover .back-icon {
+  transform: translateX(-2px);
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 24px;
+  background: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.download-btn:hover {
+  background: #0056b3;
+}
+
+.download-icon {
+  transition: transform 0.2s ease;
+}
+
+.download-btn:hover .download-icon {
+  transform: translateY(1px);
+}
+
+/* Resume Wrapper */
+.resume-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Resume Container */
+.resume-container {
+  background: #ffffff;
+  margin: 0 auto;
+  box-shadow: 1px 1px 2px #dad7d7;
+  border-radius: 3px;
   padding: 40px;
-  margin-top: 50px;
+  /* Ensure clean PDF generation */
+  position: relative;
+  isolation: isolate;
 }
 
-.header {
+/* Header Section */
+.resume-header {
   margin-bottom: 30px;
 }
-.header .full-name {
+
+.full-name {
   font-size: 40px;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-  
-.header .first-name {
+
+.first-name {
   font-weight: 700;
 }
-  
-.header .last-name {
+
+.last-name {
   font-weight: 300;
 }
 
-.header .contact-info {
+.contact-info {
   margin-bottom: 20px;
 }
 
-.header .email , .phone {
+.email,
+.phone {
   color: #999;
   font-weight: 300;
-} 
+}
 
-.header .separator {
+.separator {
   height: 10px;
   display: inline-block;
   border-left: 2px solid #999;
   margin: 0px 10px;
 }
 
-.header .position {
+.position {
   font-weight: bold;
   display: inline-block;
   margin-right: 10px;
   text-decoration: underline;
 }
 
-
+/* Content Sections */
 .details {
-line-height: 20px;
+  line-height: 20px;
 }
-.details .section {
-  margin-bottom: 40px;  
+
+.section {
+  margin-bottom: 40px;
 }
-.details .section:last-of-type {
-  margin-bottom: 0px;  
+
+.section:last-of-type {
+  margin-bottom: 0px;
 }
-.details .section__title {
+
+.section__title {
   letter-spacing: 2px;
-  color: #54AFE4;
+  color: #54afe4;
   font-weight: bold;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
-.details .section__list-item {
+
+.section__list {
+  /* Container for list items */
+}
+
+.section__list-item {
   margin-bottom: 40px;
 }
 
-.details .section__list-item:last-of-type {
+.section__list-item:last-of-type {
   margin-bottom: 0;
 }
 
-.details .left , .right {
+.left,
+.right {
   vertical-align: top;
   display: inline-block;
 }
 
-.details .left {
-  width: 60%;    
+.left {
+  width: 60%;
 }
 
-.details .right {
-  tex-align: right;
-  width: 39%;    
+.right {
+  text-align: left;
+  width: 39%;
 }
 
-.details .name {
+.name {
   font-weight: bold;
 }
 
+.addr {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.duration {
+  color: #999;
+  font-size: 12px;
+}
+
+.desc {
+  color: #555;
+}
+
+/* Links */
 .details a {
   text-decoration: none;
   color: #000;
@@ -139,35 +230,132 @@ line-height: 20px;
   text-decoration: underline;
   color: #000;
 }
-  
-.details .skills .skills__item {
-  margin-bottom: 10px;  
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .preview-page-container {
+    padding: 1rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .back-btn,
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .resume-container {
+    padding: 20px;
+  }
+
+  .full-name {
+    font-size: 32px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+  }
+
+  .section__list-item {
+    margin-bottom: 25px;
+  }
+
+  .left,
+  .right {
+    display: block;
+    width: 100%;
+  }
+
+  .left {
+    margin-bottom: 10px;
+  }
 }
 
-.details .skills .skills__item .right input {
-  display: none;
+@media (max-width: 480px) {
+  .resume-container {
+    padding: 15px;
+  }
+
+  .full-name {
+    font-size: 28px;
+  }
+
+  .section__title {
+    font-size: 14px;
+  }
+
+  .back-btn,
+  .download-btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
 }
 
-.details .skills .skills__item .right label {
-  display: inline-block;  
-  width: 20px;
-  height: 20px;
-  background: #C3DEF3;
-  border-radius: 20px;
-  margin-right: 3px;
+/* Print Styles */
+@media print {
+  .preview-page-container {
+    background: white;
+    padding: 0;
+  }
+
+  .action-buttons {
+    display: none;
+  }
+
+  .resume-wrapper {
+    max-width: none;
+    margin: 0;
+  }
+
+  .resume-container {
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+  }
+
+  body {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .full-name {
+    font-size: 32px;
+  }
+
+  .section {
+    margin-bottom: 25px;
+  }
+
+  .section__list-item {
+    margin-bottom: 20px;
+  }
 }
 
-.details .skills .skills__item .right input:checked + label {
-  background: #79A9CE;
+/* Accessibility */
+.back-btn:focus,
+.download-btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
 }
 
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .resume-container {
+    background: #ffffff;
+    border: 2px solid #000000;
+  }
 
+  .download-btn {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
 
-
-
-
-
-
-
-
-
+  .section__title {
+    color: #000000;
+  }
+}
